@@ -1,11 +1,11 @@
-1.	Написать пример REST API запроса, который будет вызываться при переходе пользователя на данный экран.
+# 1.	Написать пример REST API запроса, который будет вызываться при переходе пользователя на данный экран.
 
     Пример запроса на сервер: GET/api/v1/partner_stores
   	
-2. Привести пример ответа этого REST API в соответствии с макетом. Формат - JSON. Учесть, что при клике на плашку магазина должен осуществляться переход по ссылке на внешний ресурс.
+# 2. Привести пример ответа этого REST API в соответствии с макетом. Формат - JSON. Учесть, что при клике на плашку магазина должен осуществляться переход по ссылке на внешний ресурс.
 
-200 OK
-
+## 200 OK
+```
 {
   stores:[
     {
@@ -13,7 +13,7 @@
       "name" : "METRO",
       "logoUrl" : "https://logos.com/metro.png",
       "delivery" : {
-       "type" : "scheduled"
+       "type" : "scheduled",
        "nearestDelivery" : {
         "date": "2026-04-14",
         "from": "21:00",
@@ -28,7 +28,7 @@
       "name" : "Ашан",
       "logoUrl" : "https://logos.com/ashan.png",
       "delivery" : {
-       "type" : "scheduled"
+       "type" : "scheduled",
        "nearestDelivery" : {
         "date": "2026-04-14",
         "from": "18:00",
@@ -43,7 +43,7 @@
       "name" : "ВкусВилл",
       "logoUrl" : "https://logos.com/vkusvill.png",
       "delivery" : {
-       "type" : "asap"
+       "type" : "asap",
        "deliveryMinutes" : {
         "from": "20",
         "to": "60"
@@ -57,7 +57,7 @@
       "name" : "ВИКТОРИЯ",
       "logoUrl" : "https://logos.com/viktoriya_store.png",
       "delivery" : {
-       "type" : "scheduled"
+       "type" : "scheduled",
        "nearestDelivery" : {
         "date": "2026-04-14",
         "from": "17:00",
@@ -69,17 +69,19 @@
     },
   ]
 }
+```
 
-Ошибки:
+## Ошибки:
 
-403 Forbidden
-
+## 403 Forbidden
+```
 {
 "error" : "Доступ запрещён"
 }
-
-500 Server Error
-
+```
+## 500 Server Error
+```
 {
 "error" : "Ошибка сервера"
 }
+```
